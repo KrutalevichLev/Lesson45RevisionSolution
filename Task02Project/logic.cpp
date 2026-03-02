@@ -28,6 +28,7 @@ double calculate_sum_of_numbers_lowest_avg(double array[], int size) {
 
 	for (int i = 0; i < size; i++)
 	{
+		array[i] = array[i] < 0 ? -array[i] : array[i];
 		if (array[i] < avg) {
 			sum += array[i];
 		}
