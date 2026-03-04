@@ -13,6 +13,7 @@ double find_avg(double array[], int size) {
 
 	for (int i = 0; i < size; i++)
 	{
+		array[i] = array[i] < 0 ? -array[i] : array[i];
 		avg += array[i];
 	}
 
@@ -33,5 +34,6 @@ double calculate_sum_of_numbers_lowest_avg(double array[], int size) {
 			sum += array[i];
 		}
 	}
+
 	return sum;
 }

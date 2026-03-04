@@ -4,7 +4,7 @@ void init_random(double array[DEFAULT_SIZE], int length, int a, int b) {
 	double random_double;
 	for (int i = 0; i < length; i++)
 	{
-		random_double = (double)rand() / 100000;
+		random_double = rand() / 10 * 0.1;
 		array[i] = rand() % (b - a + 1) + a + random_double;
 	}
 }
