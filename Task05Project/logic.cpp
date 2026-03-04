@@ -8,10 +8,25 @@
 
 void reverse(int array[DEFAULT_SIZE], int size, int a, int b) {
 	int temp;
-	for (int i = a; i < (b - a) / 2; i++)
+
+	if (a < 0 || b < 0 || b >= size || size <= 0 || a >= size) {
+		return;
+	}
+
+	if (a > b) {
+		int temp = a;
+		a = b;
+		b = temp;
+
+	}
+
+	int n = (a + b) / 2;
+	for (int i = a; i <= n; i++)
 	{
 		temp = array[i];
-		array[i] = array[size - 1 - b];
-		array[size - 1 - i] = temp;
+		array[i] = array[b];
+		array[b] = temp;
+		b--;
 	}
+
 }
